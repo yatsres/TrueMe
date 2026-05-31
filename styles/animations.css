@@ -1,0 +1,381 @@
+/* LUXURY ANIMATIONS - Premium Motion Design */
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+/* Luxury fade in - long, smooth entrance */
+@keyframes luxuryFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Luxury slide up - smooth, elegant entrance */
+@keyframes luxurySlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Luxury slide down - top entrance */
+@keyframes luxurySlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Luxury slide left */
+@keyframes luxurySlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* Luxury scale entrance - subtle grow effect */
+@keyframes luxuryScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Premium glow effect for buttons */
+@keyframes premiumGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(210, 255, 114, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px 8px rgba(210, 255, 114, 0.1);
+  }
+}
+
+/* Luxury hover lift with depth */
+@keyframes luxuryLift {
+  from {
+    transform: translateY(0px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  }
+  to {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Luxury card entrance - sophisticated scale + fade */
+@keyframes luxuryCardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* Modal backdrop - luxury blur transition */
+@keyframes luxuryBackdrop {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Modal content - premium scale entrance */
+@keyframes luxuryModalScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+
+/* Text reveal - character by character feel */
+@keyframes luxuryTextReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Luxury button pulse - subtle pulse on load */
+@keyframes luxuryPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(210, 255, 114, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(210, 255, 114, 0);
+    transform: scale(1.02);
+  }
+}
+
+/* Float animation - subtle up and down */
+@keyframes luxuryFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Shimmer effect for premium feel */
+@keyframes luxuryShimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ============================================
+   ANIMATION UTILITY CLASSES
+   ============================================ */
+
+/* ENTRANCE ANIMATIONS */
+.animate-luxury-fade-in {
+  animation: luxuryFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-luxury-slide-up {
+  opacity: 0;
+  animation: luxurySlideUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-luxury-slide-down {
+  opacity: 0;
+  animation: luxurySlideDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-luxury-slide-left {
+  opacity: 0;
+  animation: luxurySlideLeft 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-luxury-scale-in {
+  animation: luxuryScaleIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-luxury-card {
+  opacity: 0;
+  animation: luxuryCardEntrance 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-luxury-float {
+  animation: luxuryFloat 3s ease-in-out infinite;
+}
+
+.animate-luxury-pulse {
+  animation: luxuryPulse 2s ease-out;
+}
+
+/* MODAL ANIMATIONS */
+.modal-backdrop {
+  animation: luxuryBackdrop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modal-content {
+  animation: luxuryModalScale 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* TEXT ANIMATIONS */
+.animate-luxury-text {
+  animation: luxuryTextReveal 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ============================================
+   TRANSITION CLASSES - INTERACTIVE ELEMENTS
+   ============================================ */
+
+/* Premium smooth transitions */
+.transition-luxury {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-luxury-lg {
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-luxury-fast {
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Smooth color transitions */
+.transition-luxury-color {
+  transition: color 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background-color 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ============================================
+   HOVER EFFECTS - LUXURY INTERACTIONS
+   ============================================ */
+
+/* Premium lift on hover */
+.hover-luxury-lift:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Luxury glow effect */
+.hover-luxury-glow:hover {
+  animation: premiumGlow 1.5s ease-in-out infinite;
+}
+
+/* Subtle scale on hover */
+.hover-luxury-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Opacity fade on hover */
+.hover-luxury-fade:hover {
+  opacity: 0.9;
+}
+
+/* Soft shadow on hover */
+.hover-luxury-shadow:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Color shift on hover */
+.hover-luxury-color:hover {
+  color: #d2ff72;
+}
+
+/* ============================================
+   STAGGER ANIMATIONS - SEQUENTIAL ENTRANCE
+   ============================================ */
+
+.stagger-item {
+  opacity: 0;
+  animation: luxurySlideUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.25s; }
+.stagger-item:nth-child(3) { animation-delay: 0.4s; }
+.stagger-item:nth-child(4) { animation-delay: 0.55s; }
+.stagger-item:nth-child(5) { animation-delay: 0.7s; }
+.stagger-item:nth-child(6) { animation-delay: 0.85s; }
+.stagger-item:nth-child(n+7) { animation-delay: 1s; }
+
+/* Staggered cards with scale */
+.stagger-card {
+  opacity: 0;
+  animation: luxuryCardEntrance 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.stagger-card:nth-child(1) { animation-delay: 0.1s; }
+.stagger-card:nth-child(2) { animation-delay: 0.2s; }
+.stagger-card:nth-child(3) { animation-delay: 0.3s; }
+.stagger-card:nth-child(4) { animation-delay: 0.4s; }
+.stagger-card:nth-child(5) { animation-delay: 0.5s; }
+.stagger-card:nth-child(6) { animation-delay: 0.6s; }
+.stagger-card:nth-child(7) { animation-delay: 0.7s; }
+.stagger-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* ============================================
+   GPU ACCELERATION & PERFORMANCE
+   ============================================ */
+
+.gpu-accelerated {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth scroll behavior */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   ACCESSIBILITY - RESPECTS USER PREFERENCES
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   PREMIUM EASING FUNCTIONS
+   ============================================ */
+
+/* Cubic bezier easing for luxury feel */
+/* cubic-bezier(0.34, 1.56, 0.64, 1) = "out-back" elastic feel */
+/* cubic-bezier(0.25, 0.46, 0.45, 0.94) = "in-out" smooth feel */
+
+/* ============================================
+   GLOBAL BUTTON HOVER EFFECT
+   ============================================ */
+
+/* Universal button hover with arrow rotation */
+button {
+  position: relative;
+}
+
+button svg {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+button:hover svg {
+  transform: rotate(180deg) !important;
+}
+
+/* ============================================
+   IMAGE CAROUSEL BLUR ANIMATION
+   ============================================ */
+
+@keyframes carouselBlur {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}

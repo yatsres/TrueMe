@@ -1,0 +1,214 @@
+/* Centralized Font Styles Configuration */
+/* Update these variables once and they apply everywhere on the page */
+
+/* Font Face Declarations */
+/* Inter - Variable Font */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Bricolage Grotesque - Variable Font */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Canva Sans - Variable Font */
+@font-face {
+  font-family: 'Canva Sans';
+  src: url('/fonts/CanvaSans-VF.ttf');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  /* Font Families */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-family-inter: 'Inter', sans-serif;
+  --font-family-bricolage: 'Bricolage Grotesque', sans-serif;
+  --font-family-canva: 'Canva Sans', sans-serif;
+
+  /* TM_TITLE - Inter */
+  --font-size-title: 80px;
+  --font-weight-title: 700;
+  --line-height-title: 1.2;
+  --letter-spacing-title: -0.02em;
+  --font-family-title: var(--font-family-inter);
+  --tm-title: var(--font-size-title) / var(--line-height-title) var(--font-family-title);
+
+  /* TM_TITLE_2 - Inter (96px) */
+  --font-size-title-2: 96px;
+  --font-weight-title-2: 700;
+  --line-height-title-2: 1.2;
+  --letter-spacing-title-2: -0.02em;
+  --font-family-title-2: var(--font-family-inter);
+  --tm-title-2: var(--font-size-title-2) / var(--line-height-title-2) var(--font-family-title-2);
+
+  /* TM_HEADING - Bricolage Grotesque */
+  --font-size-heading: 54px;
+  --font-weight-heading: 900;
+  --line-height-heading: 1.3;
+  --letter-spacing-heading: -0.01em;
+  --font-family-heading: var(--font-family-bricolage);
+  --tm-heading: var(--font-size-heading) / var(--line-height-heading) var(--font-family-heading);
+
+  /* TM_SUBHEADER - Bricolage Grotesque (based on tm_heading but smaller) */
+  --font-size-subheader: 36px;
+  --font-weight-subheader: 900;
+  --line-height-subheader: 1.3;
+  --letter-spacing-subheader: -0.01em;
+  --font-family-subheader: var(--font-family-bricolage);
+  --tm-subheader: var(--font-size-subheader) / var(--line-height-subheader) var(--font-family-subheader);
+
+  /* TM_SUBHEADER2 - Bricolage Grotesque (based on tm_subheader but 26px) */
+  --font-size-subheader-2: 26px;
+  --font-weight-subheader-2: 900;
+  --line-height-subheader-2: 1.3;
+  --letter-spacing-subheader-2: -0.01em;
+  --font-family-subheader-2: var(--font-family-bricolage);
+  --tm-subheader-2: var(--font-size-subheader-2) / var(--line-height-subheader-2) var(--font-family-subheader-2);
+
+  /* TM_BODY_BIG - Canva Sans */
+  --font-size-body-big: 20px;
+  --font-weight-body-big: 400;
+  --line-height-body-big: 1.6;
+  --letter-spacing-body-big: 0;
+  --font-family-body: var(--font-family-canva);
+  --tm-body-big: var(--font-size-body-big) / var(--line-height-body-big) var(--font-family-body);
+
+  /* TM_BODY - Canva Sans */
+  --font-size-body: 18px;
+  --font-weight-body: 400;
+  --line-height-body: 1.44;
+  --letter-spacing-body: 0;
+  --tm-body: var(--font-size-body) / var(--line-height-body) var(--font-family-body);
+
+  /* TM_BODY_BOLD - Canva Sans Bold (based on tm_body) */
+  --font-size-body-bold: 18px;
+  --font-weight-body-bold: 700;
+  --line-height-body-bold: 1.44;
+  --letter-spacing-body-bold: 0;
+  --font-family-body-bold: var(--font-family-canva);
+  --tm-body-bold: var(--font-size-body-bold) / var(--line-height-body-bold) var(--font-family-body-bold);
+
+  /* TM_BUTTON - Canva Sans */
+  --font-size-button: 16px;
+  --font-weight-button: 700;
+  --line-height-button: 1.4;
+  --letter-spacing-button: 0.05em;
+  --font-family-button: var(--font-family-canva);
+  --tm-button: var(--font-size-button) / var(--line-height-button) var(--font-family-button);
+
+  /* TM_CAPTION - Canva Sans */
+  --font-size-caption: 12px;
+  --font-weight-caption: 500;
+  --line-height-caption: 1.4;
+  --letter-spacing-caption: 0.02em;
+  --font-family-caption: var(--font-family-canva);
+  --tm-caption: var(--font-size-caption) / var(--line-height-caption) var(--font-family-caption);
+
+  /* TM_NAV - Canva Sans */
+  --font-size-nav: 14px;
+  --font-weight-nav: 600;
+  --line-height-nav: 1.4;
+  --letter-spacing-nav: 0;
+  --font-family-nav: var(--font-family-canva);
+  --tm-nav: var(--font-size-nav) / var(--line-height-nav) var(--font-family-nav);
+}
+
+/* Utility Classes - can be used in components */
+
+.tm_title {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-title);
+  line-height: var(--line-height-title);
+  letter-spacing: var(--letter-spacing-title);
+  font-family: var(--font-family-title);
+}
+
+.tm_title_2 {
+  font-size: var(--font-size-title-2);
+  font-weight: var(--font-weight-title-2);
+  line-height: var(--line-height-title-2);
+  letter-spacing: var(--letter-spacing-title-2);
+  font-family: var(--font-family-title-2);
+}
+
+.tm_heading {
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  font-family: var(--font-family-heading);
+}
+
+.tm_subheader {
+  font-size: var(--font-size-subheader);
+  font-weight: var(--font-weight-subheader);
+  line-height: var(--line-height-subheader);
+  letter-spacing: var(--letter-spacing-subheader);
+  font-family: var(--font-family-subheader);
+}
+
+.tm_subheader_2 {
+  font-size: var(--font-size-subheader-2);
+  font-weight: var(--font-weight-subheader-2);
+  line-height: var(--line-height-subheader-2);
+  letter-spacing: var(--letter-spacing-subheader-2);
+  font-family: var(--font-family-subheader-2);
+}
+
+.tm_body_big {
+  font-size: var(--font-size-body-big);
+  font-weight: var(--font-weight-body-big);
+  line-height: var(--line-height-body-big);
+  letter-spacing: var(--letter-spacing-body-big);
+  font-family: var(--font-family-body);
+}
+
+.tm_body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+  font-family: var(--font-family-body);
+}
+
+.tm_body_bold {
+  font-size: var(--font-size-body-bold);
+  font-weight: var(--font-weight-body-bold);
+  line-height: var(--line-height-body-bold);
+  letter-spacing: var(--letter-spacing-body-bold);
+  font-family: var(--font-family-body-bold);
+}
+
+.tm_button {
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-button);
+  line-height: var(--line-height-button);
+  letter-spacing: var(--letter-spacing-button);
+  font-family: var(--font-family-button);
+  text-transform: uppercase;
+}
+
+.tm_caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-caption);
+  line-height: var(--line-height-caption);
+  letter-spacing: var(--letter-spacing-caption);
+  font-family: var(--font-family-body);
+}
+
+.tm_nav {
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-nav);
+  line-height: var(--line-height-nav);
+  letter-spacing: var(--letter-spacing-nav);
+  font-family: var(--font-family-body);
+  text-transform: uppercase;
+}
