@@ -1,6 +1,5 @@
 'use client';
 
-import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import CardGrid from '@/components/CardGrid';
 import AboutSection from '@/components/AboutSection';
@@ -25,9 +24,6 @@ export default function PageContent() {
   return (
     <>
       <main className="overflow-hidden scroll-smooth">
-        {/* 000_header */}
-        <Header />
-
         {/* 001_hero */}
         <Hero />
 

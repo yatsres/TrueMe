@@ -3,6 +3,7 @@ import './globals.css';
 import '@/styles/fontStyles.css';
 import { AboutDetailProvider } from '@/context/AboutDetailContext';
 import { BookingModalProvider } from '@/context/BookingModalContext';
+import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title: 'TRUE ME Camp | A Week That Can Change How a Teenager Feels About Themselves',
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body className="bg-trueme-bg text-trueme-dark">
         <BookingModalProvider>
         <AboutDetailProvider>
+        <Header />
         {/* Meta Pixel */}
         <script
           dangerouslySetInnerHTML={{
