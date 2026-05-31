@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import MetaPixel from '@/components/MetaPixel';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://trueme.vercel.app'),
   title: 'TRUE ME Camp | A Week That Can Change How a Teenager Feels About Themselves',
   description: 'A one-week transformative experience for teenagers aged 14-18. Discover friendship, confidence, joy, and belonging at TRUE ME Camp in Mafra, Portugal.',
   openGraph: {
