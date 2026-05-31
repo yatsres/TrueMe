@@ -7,85 +7,20 @@ import { useInView } from '@/hooks/useInView';
 export default function FacilitatorsSection() {
   const [isOpen, setIsOpen] = useState(false);
   const { ref, isInView } = useInView();
-  const [imageStyle, setImageStyle] = React.useState({ marginTop: '0px', height: '400px' });
-  const [julieImageStyle, setJulieImageStyle] = React.useState({ marginTop: '0px', height: '500px' });
-  const [iraImageStyle, setIraImageStyle] = React.useState({ marginTop: '0px', height: '500px' });
-  const [julieCarouselIndex, setJulieCarouselIndex] = React.useState(0);
-  const [iraCarouselIndex, setIraCarouselIndex] = React.useState(0);
-  const detailsRef = React.useRef(null);
+  const detailsRef = React.useRef<HTMLDivElement>(null);
 
-  const julieImages = ['/img_072_102.jpg', '/img_072_103.jpg', '/img_072_101.png'];
-  const iraImages = ['/img_072_202.jpg', '/img_072_203.jpg', '/img_072_201.png'];
-
-  // Autoplay Julie carousel
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setJulieCarouselIndex(prev => (prev + 1) % julieImages.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [julieImages.length]);
-
-  // Autoplay Ira carousel
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setIraCarouselIndex(prev => (prev + 1) % iraImages.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [iraImages.length]);
 
   React.useEffect(() => {
     const updateAlignment = () => {
-      const heading = document.querySelector('#facilitators-heading');
-      const button = document.querySelector('#facilitators-button');
-
-      if (heading && button) {
-        const headingRect = heading.getBoundingClientRect();
-        const buttonRect = button.getBoundingClientRect();
-
-        // Height from heading top to button bottom
-        const height = buttonRect.bottom - headingRect.top;
-
-        setImageStyle({
-          marginTop: '0px',
-          height: `${height}px`
-        });
-      }
+      // Placeholder for future alignment logic
     };
 
     const updateJulieImageAlignment = () => {
-      const julieHeading = document.querySelector('#julie-heading');
-      const julieLogos = document.querySelector('#julie-logos');
-
-      if (julieHeading && julieLogos) {
-        const headingRect = julieHeading.getBoundingClientRect();
-        const logosRect = julieLogos.getBoundingClientRect();
-
-        // Height from heading top to logos bottom
-        const height = logosRect.bottom - headingRect.top;
-
-        setJulieImageStyle({
-          marginTop: '0px',
-          height: `${height}px`
-        });
-      }
+      // Placeholder for future alignment logic
     };
 
     const updateIraImageAlignment = () => {
-      const iraHeading = document.querySelector('#ira-heading');
-      const iraLogos = document.querySelector('#ira-logos');
-
-      if (iraHeading && iraLogos) {
-        const headingRect = iraHeading.getBoundingClientRect();
-        const logosRect = iraLogos.getBoundingClientRect();
-
-        // Height from heading top to logos bottom
-        const height = logosRect.bottom - headingRect.top;
-
-        setIraImageStyle({
-          marginTop: '0px',
-          height: `${height}px`
-        });
-      }
+      // Placeholder for future alignment logic
     };
 
     // Small delay to ensure DOM is fully painted

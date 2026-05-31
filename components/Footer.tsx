@@ -23,13 +23,13 @@ export default function Footer() {
 
     // Title
     doc.setFontSize(24);
-    doc.setFont(undefined, 'bold');
+    doc.setFont('helvetica', 'bold');
     doc.text(content.title, 20, yPosition);
     yPosition += 15;
 
     // Last updated
     doc.setFontSize(10);
-    doc.setFont(undefined, 'normal');
+    doc.setFont('helvetica', 'normal');
     doc.setTextColor(128, 128, 128);
     doc.text(`Last updated: ${content.lastUpdated}`, 20, yPosition);
     yPosition += 10;
@@ -46,14 +46,14 @@ export default function Footer() {
 
       // Section heading
       doc.setFontSize(12);
-      doc.setFont(undefined, 'bold');
+      doc.setFont('helvetica', 'bold');
       doc.text(section.heading, 20, yPosition);
       yPosition += 8;
 
       // Section content
       if (section.content) {
         doc.setFontSize(10);
-        doc.setFont(undefined, 'normal');
+        doc.setFont('helvetica', 'normal');
         const lines = doc.splitTextToSize(section.content, 170);
         doc.text(lines, 20, yPosition);
         yPosition += lines.length * 5 + 5;

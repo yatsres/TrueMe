@@ -67,10 +67,6 @@ export default function LocationSection() {
     '/img_094_01.jpg',
   ];
 
-  const roomImages = [
-    '/img_094_03.jpg',
-  ];
-
   return (
     <div id="location">
       {/* 091_Location - Background video with heading and text */}

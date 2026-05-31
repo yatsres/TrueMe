@@ -1,58 +1,106 @@
-// Analytics utilities for Meta Pixel and Google Analytics
+/**
+ * Analytics Utility Module
+ * Centralized tracking for Meta Pixel and future providers
+ * Works in static export, shared hosting, and all deployment platforms
+ */
+
+const META_PIXEL_ID = '1558481559035983';
 
 declare global {
   interface Window {
-    fbq: any;
-    gtag: any;
+    fbq?: (action: string, event: string, data?: Record<string, any>) => void;
+    _fbq?: any;
   }
 }
 
 /**
- * Track page view with Meta Pixel
+ * Initialize Meta Pixel
+ * Safe to call multiple times
  */
-export const trackMetaPixelPageView = () => {
-  if (typeof window !== 'undefined' && typeof window.fbq !== 'undefined') {
-    window.fbq('track', 'PageView');
+export const initializeMetaPixel = (): void => {
+  if (typeof window === 'undefined') return;
+  if (window.fbq) return; // Already initialized
+
+  // Load Meta Pixel script
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (function (f: any, b: any, e: string, v: string) {
+    let n: any;
+    let t: any;
+    let s: any;
+
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod
+        ? n.callMethod.apply(n, arguments)
+        : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = true;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = true;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    if (s && s.parentNode) {
+      s.parentNode.insertBefore(t, s);
+    }
+  })(
+    window,
+    document,
+    'script',
+    'https://connect.facebook.net/en_US/fbevents.js'
+  );
+
+  if (window.fbq) {
+    (window.fbq as any)('init', META_PIXEL_ID);
   }
 };
 
 /**
- * Track lead conversion
+ * Track PageView event
  */
-export const trackMetaPixelLead = () => {
-  if (typeof window !== 'undefined' && typeof window.fbq !== 'undefined') {
-    window.fbq('track', 'Lead');
-  }
+export const trackPageView = (): void => {
+  if (typeof window === 'undefined' || !window.fbq) return;
+  window.fbq('track', 'PageView');
 };
 
 /**
- * Track custom event with Meta Pixel
+ * Track Lead event
+ * Triggered when user shows interest (CTA click, form interaction, etc.)
  */
-export const trackMetaPixelEvent = (eventName: string, data?: Record<string, any>) => {
-  if (typeof window !== 'undefined' && typeof window.fbq !== 'undefined') {
-    window.fbq('track', eventName, data);
-  }
+export const trackLead = (): void => {
+  if (typeof window === 'undefined' || !window.fbq) return;
+  window.fbq('track', 'Lead');
 };
 
 /**
- * Google Analytics pageview (ready for implementation)
+ * Track custom event
+ * @param eventName - Name of the event
+ * @param data - Optional event data
  */
-export const trackGoogleAnalyticsPageView = (url: string) => {
-  if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
-    window.gtag('config', 'GA_ID', {
-      page_path: url,
-    });
-  }
-};
-
-/**
- * Google Analytics event tracking (ready for implementation)
- */
-export const trackGoogleAnalyticsEvent = (
+export const trackCustomEvent = (
   eventName: string,
-  params?: Record<string, any>
-) => {
-  if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
-    window.gtag('event', eventName, params);
-  }
+  data?: Record<string, any>
+): void => {
+  if (typeof window === 'undefined' || !window.fbq) return;
+  window.fbq('track', eventName, data);
+};
+
+/**
+ * Track form submission
+ */
+export const trackFormSubmit = (): void => {
+  if (typeof window === 'undefined' || !window.fbq) return;
+  window.fbq('track', 'Contact');
+};
+
+/**
+ * Track CTA click
+ * @param ctaName - Name/identifier of the CTA button
+ */
+export const trackCTAClick = (ctaName: string): void => {
+  if (typeof window === 'undefined' || !window.fbq) return;
+  window.fbq('track', 'Lead', { cta: ctaName });
 };

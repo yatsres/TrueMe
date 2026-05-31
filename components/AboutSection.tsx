@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import React from 'react';
 import { AboutDetailContext } from '@/context/AboutDetailContext';
 import { useInView } from '@/hooks/useInView';
+import { trackLead } from '@/lib/analytics';
 
 export default function AboutSection() {
   const { showDetails, setShowDetails } = useContext(AboutDetailContext);
@@ -35,8 +36,8 @@ export default function AboutSection() {
               <button
                 onClick={() => {
                   setShowDetails(!showDetails);
-                  if (!showDetails && typeof window.fbq !== 'undefined') {
-                    window.fbq('track', 'Lead');
+                  if (!showDetails) {
+                    trackLead();
                   }
                 }}
                 className="tm_button transition-luxury hover-luxury-lift hover-luxury-scale gpu-accelerated flex items-center justify-center gap-3"
@@ -78,7 +79,6 @@ export default function AboutSection() {
                 muted
                 playsInline
                 poster="/camp02-poster.jpg"
-                loading="lazy"
                 preload="metadata"
                 style={{ objectFit: 'cover' }}
               >

@@ -11,3 +11,7 @@ yarn-debug.log*
 yarn-error.log*
 .vercel
 dist/
+.env*
+public/tm_010_hero.mp4
+public/tm_070_vd01.mp4
+public/vid_091.mp4

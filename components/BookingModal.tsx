@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { trackFormSubmit, trackLead } from '@/lib/analytics';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -57,6 +58,8 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
       if (response.ok) {
         setSubmitStatus('success');
+        trackFormSubmit();
+        trackLead();
         setFormData({
           name: '',
           phone: '',
